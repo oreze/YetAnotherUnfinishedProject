@@ -1,0 +1,6 @@
+@YetAnotherUnfinishedProject.API_HostAddress = http://localhost:5183
+
+GET {{YetAnotherUnfinishedProject.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
