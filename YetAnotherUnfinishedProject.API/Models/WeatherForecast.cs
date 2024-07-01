@@ -1,4 +1,4 @@
-namespace YetAnotherUnfinishedProject.API;
+namespace YetAnotherUnfinishedProject.API.Models;
 
 public class WeatherForecast
 {
