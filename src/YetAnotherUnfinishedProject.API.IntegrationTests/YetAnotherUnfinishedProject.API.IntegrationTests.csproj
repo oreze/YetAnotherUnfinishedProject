@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\YetAnotherUnfinishedProject.API\YetAnotherUnfinishedProject.API.csproj" />
+    </ItemGroup>
+
 </Project>
