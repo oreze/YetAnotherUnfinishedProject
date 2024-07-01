@@ -1,4 +1,5 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+EXPOSE 8080
 
 ARG BUILD_CONFIGURATION=Release
 
