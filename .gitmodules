@@ -1,0 +1,3 @@
+[submodule ".deploy/proxmox-kubernetes"]
+	path = .deploy/proxmox-kubernetes
+	url = git@github.com:oreze/proxmox-kubernetes.git
