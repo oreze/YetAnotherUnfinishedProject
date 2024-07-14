@@ -2,6 +2,7 @@
 kind: Service
 metadata:
   name: yaup-api-service
+  namespace: kube-system
 spec:
   selector:
     app: yaup-api
