@@ -48,3 +48,17 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKER_USERNAME }}/yaup-api:${{ github.sha }} ./src/YetAnotherUnfinishedProject.API
           docker push ${{ secrets.DOCKER_USERNAME }}/yaup-api:${{ github.sha }}
+  
+  tailscale:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: prod
+    
+    steps:
+      - name: Connect to the headscale network
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.HEADSCALE_AUTH_KEY }}
+          tags: tag:ci
+          version: '1.66.3'
+          args: '--login-server=${{secrets.HEADSCALE_URL}}'
