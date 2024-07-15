@@ -46,7 +46,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/yaup-api:${{ github.sha }} ./src/YetAnotherUnfinishedProject.API
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/yaup-api:${{ github.sha }} ./src/YetAnotherUnfinishedProject.API
           docker push ${{ secrets.DOCKER_USERNAME }}/yaup-api:${{ github.sha }}
   
   tailscale:
